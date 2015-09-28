@@ -1,0 +1,10 @@
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/CISolution.Droid.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/System.Xml.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/Mono.Android.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/System.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/System.Net.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/System.Web.Services.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/Newtonsoft.Json.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/System.Runtime.Serialization.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/System.Core.dll
+/Users/Admin/Projects/CISolution/Droid/obj/Debug/assemblies/mscorlib.dll

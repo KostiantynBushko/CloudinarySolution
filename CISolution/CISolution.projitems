@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{246C51B4-9E8C-4101-A166-364BC2B34365}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CISolution</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Account.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\BaseParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\BaseResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\CreateTransformParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\DelDerivedResParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\DelDerivedResResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\DeleteUploadPreset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\DeletionParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\DeletionResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\DelResParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\DelResResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ExplicitParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ExplicitResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ExplodeParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ExplodeResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\GetFoldersResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\GetResourceParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\GetResourceResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\GetTransformParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\GetTransformResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\GetUploadPreset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ImageUploadParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ImageUploadResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListResourcesParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListResourcesResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListResourceTypesResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListTagsParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListTagsResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListTransformsParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListTransformsResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\ListUploadPresets.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\MultiParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\MultiResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\RawUploadParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\RawUploadResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\RenameParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\RenameResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\SpriteParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\SpriteResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\TagParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\TagResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\TextParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\TextResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\TransformResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\UpdateParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\UpdateTransformParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\UpdateTransformResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\UploadPreset.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\UsageResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\VideoUploadParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Actions\VideoUploadResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Api.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Cloudinary.Async.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Cloudinary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\StringDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Transforms\ImageTransform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Transforms\Transformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Transforms\VideoTransform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cloudinary\Url.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CloudinaryHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Cloudinary\packages.config" />
+  </ItemGroup>
+</Project>
