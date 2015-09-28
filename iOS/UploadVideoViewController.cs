@@ -8,8 +8,8 @@ namespace CISolution.iOS
 	partial class UploadVideoViewController : UIViewController
 	{
 
+		CloudinaryDotNet.Actions.FileDescription fd;
 		UIImagePickerController pickerController;
-		string videoPath;
 		CloudinaryDotNet.Actions.VideoUploadResult uploadResult = null;
 		UIAlertController alertController = null;
 
@@ -28,9 +28,8 @@ namespace CISolution.iOS
 			selectVideo.TouchUpInside += (sender, e) => PresentViewController (pickerController, true, null);
 
 			uploadVideo.TouchUpInside += (sender, e) =>  {
-				Console.WriteLine("Execute cloudinary upload video " + videoPath);
-
-				uploadResult = new CISolution.CloudinaryHelper().uploadVideo(videoPath);
+				
+				uploadResult = new CISolution.CloudinaryHelper().uploadVideo(fd);
 
 				if(uploadResult.Error == null) {
 					alertController = UIAlertController.Create("Success", uploadResult.JsonObj.ToString(), UIAlertControllerStyle.ActionSheet);
@@ -49,16 +48,8 @@ namespace CISolution.iOS
 			if(e.Info [UIImagePickerController.MediaType].ToString ().Equals ("public.movie")) {
 				NSUrl mediaURL = e.Info[UIImagePickerController.MediaURL] as NSUrl;
 				NSData data = NSData.FromUrl (mediaURL);
-				string documentsDirectory = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
-				string path = System.IO.Path.Combine (documentsDirectory, "video.m4v");
-				NSError err = null;
-				if (data.Save (path, false, out err)) {
-					Console.WriteLine ("Save video to application bundle directory as : " + path);
-					this.videoPath = path;
-					uploadVideo.Enabled = true;
-				} else {
-					this.videoPath = null;
-				}
+				fd = new CloudinaryDotNet.Actions.FileDescription ("video",data.AsStream());
+				uploadVideo.Enabled = true;
 			} 
 
 			pickerController.DismissViewController (true, null);

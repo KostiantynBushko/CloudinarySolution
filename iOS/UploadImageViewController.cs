@@ -7,8 +7,8 @@ namespace CISolution.iOS
 {
 	partial class UploadImageViewController : UIViewController {
 
+		CloudinaryDotNet.Actions.FileDescription fd;
 		UIImagePickerController imagePicker = null;
-		string imageFilePath = null;
 		CloudinaryDotNet.Actions.ImageUploadResult uploadResult = null;
 
 		#region View lifecycle
@@ -32,9 +32,7 @@ namespace CISolution.iOS
 			};
 
 			uploadImage.TouchUpInside += (sender, e) => {
-				Console.WriteLine("Execute cloudinary upload image " + imageFilePath);
-
-				uploadResult = new CISolution.CloudinaryHelper().uploadImage(imageFilePath);
+				uploadResult = new CISolution.CloudinaryHelper().uploadImage(fd);
 
 				if(uploadResult.Error == null) {
 					Console.WriteLine("Video success uploaded...");
@@ -52,17 +50,9 @@ namespace CISolution.iOS
 				UIImage originalImage = e.Info [UIImagePickerController.OriginalImage] as UIImage;
 				if (originalImage != null) {
 					imageView.Image = originalImage;
-					string documentsDirectory = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
-					string path = System.IO.Path.Combine (documentsDirectory, "image.jpg");
 					NSData imgData = originalImage.AsJPEG ();
-					NSError err = null;
-					if (imgData.Save (path, false, out err)) {
-						Console.WriteLine ("Save image to application bundle directory as : " + path);
-						this.imageFilePath = path;
-						uploadImage.Enabled = true;
-					} else {
-						this.imageFilePath = null;
-					}
+					fd = new CloudinaryDotNet.Actions.FileDescription ("image",imgData.AsStream ());
+					uploadImage.Enabled = true;
 				}
 			} 
 			imagePicker.DismissViewController (true, null);

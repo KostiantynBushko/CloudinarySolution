@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using CloudinaryDotNet;
 
 namespace CISolution
@@ -28,6 +29,20 @@ namespace CISolution
 		public CloudinaryDotNet.Actions.ImageUploadResult uploadImage(string imageFilePath) {
 			CloudinaryDotNet.Actions.ImageUploadParams uploadParam = new CloudinaryDotNet.Actions.ImageUploadParams(){
 				File = new CloudinaryDotNet.Actions.FileDescription(imageFilePath)
+			};
+			return cloudinary.Upload(uploadParam);
+		}
+			
+		public CloudinaryDotNet.Actions.VideoUploadResult uploadVideo(CloudinaryDotNet.Actions.FileDescription fileDescription) {
+			CloudinaryDotNet.Actions.VideoUploadParams uploadParam = new CloudinaryDotNet.Actions.VideoUploadParams(){
+				File = fileDescription
+			};
+			return cloudinary.Upload(uploadParam);
+		}
+
+		public CloudinaryDotNet.Actions.ImageUploadResult uploadImage(CloudinaryDotNet.Actions.FileDescription fileDescription) {
+			CloudinaryDotNet.Actions.ImageUploadParams uploadParam = new CloudinaryDotNet.Actions.ImageUploadParams(){
+				File = fileDescription
 			};
 			return cloudinary.Upload(uploadParam);
 		}
